@@ -19,14 +19,14 @@ jobs:
 
       - name: Copy files
         run: |
-          mkdir -p portal/mushimushi
+          mkdir -p portal/games/mushimushi
 
-          find portal/mushimushi -mindepth 1 -delete
+          find portal/games/mushimushi -mindepth 1 -delete
 
           rsync -av \
             --exclude='.git' \
             --exclude='.github' \
-            ./ portal/mushimushi/
+            ./ portal/games/mushimushi/
 
       - name: Commit and Push
         run: |
